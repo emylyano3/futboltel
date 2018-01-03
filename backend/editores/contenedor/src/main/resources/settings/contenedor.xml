@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<gui xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://svn3.xp-dev.com/svn/Futboltel/trunk/Implementacion/fulboltel/guibuilder/src/main/resources/gui.xsd">
+
+	<menu_bars>
+		<menu_bar name="principal" tool_tip="Barra de menu de la ventana principal"
+			enabled="true">
+			<menu name="editors" text="Editores" tool_tip="Menú de selección de editores"
+				enabled="true">
+<!-- 				<menu_item name="administracion" text="Administración" -->
+<!-- 					tool_tip="Editor de administración" enabled="true" action_listener="" -->
+<!-- 					icon="/images/administracion.png" /> -->
+<!-- 				<menu_item name="contenido" text="Contenido" tool_tip="Editor de contenido" -->
+<!-- 					enabled="true" action_listener="" icon="/images/contenido.png" /> -->
+<!-- 				<menu_item name="templates" text="Plantillas" tool_tip="Editor de plantillas" -->
+<!-- 					enabled="true" action_listener="" icon="/images/plantillas.png" /> -->
+				<menu_item name="salir" text="Salir" tool_tip="Salir de la aplicación"
+					enabled="true"
+					action_listener="com.deportel.futboltel.editor.contenedor.view.ContenedorActionListener"
+					icon="/images/exit.png" />
+			</menu>
+			<!-- <menu name="lookandfeel" text="Estilos" tool_tip="Cambia el estilo 
+				de la aplicacion" enabled="true" > -->
+			<!-- <radio_button_menu_item name="black" text="Black" tool_tip="" enabled="true" 
+				action_listener="com.deportel.futboltel.editor.contenedor.view.ContenedorActionListener" 
+				/> -->
+			<!-- <radio_button_menu_item name="blue" text="Blue" tool_tip="" enabled="true" 
+				action_listener="com.deportel.futboltel.editor.contenedor.view.ContenedorActionListener" 
+				/> -->
+			<!-- <radio_button_menu_item name="sky" text="Sky" tool_tip="" enabled="true" 
+				action_listener="com.deportel.futboltel.editor.contenedor.view.ContenedorActionListener" 
+				/> -->
+			<!-- </menu> -->
+			<!-- <menu name="help" text="Ayuda" tool_tip="Menú de ayuda" enabled="true" 
+				> -->
+			<!-- <menu_item name="about" text="Acerda de" tool_tip="Información acerca 
+				de la aplicación" enabled="true" action_listener="" icon="/images/about.png" 
+				/> -->
+			<!-- </menu> -->
+		</menu_bar>
+	</menu_bars>
+
+	<panels>
+		<panel name="mainPanel" enabled="true" tool_tip=""
+			layout="org.jdesktop.layout.GroupLayout" />
+		<panel name="topPanelBar" enabled="true" tool_tip="" />
+		<panel name="bottomPanelBar" enabled="true" tool_tip="" />
+		<panel name="editorsTrayBar" enabled="true" tool_tip="Tray Bar de editores" />
+		<tabbed_panel name="general" tool_tip="" enabled="true" />
+	</panels>
+
+	<tool_bars>
+		<tool_bar name="mainToolBar" enabled="true"
+			tool_tip="La barra de herramientas principal de la pantalla" />
+	</tool_bars>
+
+	<state_bars>
+		<state_bar name="mainStateBar" enabled="true"
+			tool_tip="La barra estado pricipal de la pantalla" />
+	</state_bars>
+
+	<separators>
+		<separator name="topBarSeparator" orientation="horizontal"
+			enabled="true" visible="false" />
+		<separator name="bottomBarSeparator" orientation="horizontal"
+			enabled="true" visible="false" />
+	</separators>
+
+</gui>

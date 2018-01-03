@@ -1,0 +1,24 @@
+<ehcache>
+
+	<defaultCache 
+		maxElementsInMemory="10000"
+		eternal="false"
+		timeToIdleSeconds="300" 
+		timeToLiveSeconds="150"
+		overflowToDisk="false"
+		diskPersistent="false" 
+		diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LFU" />
+	
+	<cache 
+		name="futboltel-componentes" 
+		maxElementsInMemory="10000"
+		eternal="false"
+		timeToIdleSeconds="300" 
+		timeToLiveSeconds="150"
+		overflowToDisk="false"
+		diskPersistent="false" 
+		diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LFU" />
+    
+</ehcache>

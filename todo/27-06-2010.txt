@@ -1,0 +1,10 @@
+1. Chequear por que cuando importo un XML, las properties que tienen source I no se persisten en la base. DONE
+2. Ordenar por orden alfabetico las propiedades editables en el editor de componentes. DONE
+3. Ver por que es necesario un restart del servidor para que se vean reflejados los cambios en la base de componentes. DONE
+4. Revisar el bug en la pantalla de susc cuando se produce un error de servidor. DONE
+5. Guardar la TX en cada solicitud al server DONE
+6. Desharcodear el tema en la importacion de componentes. DONE
+7. Hacer que el Paquete instalador corra el script de inicio
+8. Configurar el servidor productivo DONE
+9. Hacer que se puedan editar componentes de contenido (ademas de aquellos que tienen propiedades con source I)
+10.Implementar el cancelar de la conexion

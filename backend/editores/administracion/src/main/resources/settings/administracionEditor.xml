@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<gui xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://svn3.xp-dev.com/svn/Futboltel/trunk/Implementacion/fulboltel/guibuilder/src/main/resources/gui.xsd">
+
+	<panels>
+		<panel name="general" tool_tip="" layout="org.jdesktop.layout.GroupLayout"
+			font_name="Arial" font_style="bold" font_size="13"
+			border="" enabled="true" visible="true" />
+		<panel name="listado" tool_tip=""
+			font_name="Arial" font_style="bold" font_size="13"
+			layout="org.jdesktop.layout.GroupLayout" border="" enabled="true"
+			visible="false" />
+		<panel name="ingresoDatosGeneral" tool_tip=""
+			font_name="Arial" font_style="bold" font_size="13"
+			layout="org.jdesktop.layout.GroupLayout" border="" enabled="true"
+			visible="false" />
+		<panel name="ingresoDatosCampos" tool_tip=""
+			font_name="Arial" font_style="bold" font_size="13"
+			layout="org.jdesktop.layout.GroupLayout" border="" enabled="true"
+			visible="false" />
+		<panel name="confirmacion" tool_tip=""
+			font_name="Arial" font_style="bold" font_size="13"
+			layout="org.jdesktop.layout.GroupLayout" border="" enabled="true"
+			visible="false" />
+		<panel name="ingresoDatosTabla" tool_tip=""
+			font_name="Arial" font_style="bold" font_size="13"
+			layout="org.jdesktop.layout.GroupLayout" border="" enabled="true"
+			visible="false" />
+		<panel name="crossData" tool_tip=""
+			font_name="Arial" font_style="bold" font_size="13"
+			layout="org.jdesktop.layout.GroupLayout" border="" enabled="true"
+			visible="false" />
+	</panels>
+
+	<scroll_panes>
+		<scroll_pane name="grillaScroll" enabled="true" visible="true" />
+		<scroll_pane name="inputGridScroll" enabled="true"
+			visible="true" />
+		<scroll_pane name="crossData" enabled="true" visible="true" />
+	</scroll_panes>
+
+	<labels>
+		<label name="alias" text="Alias" tool_tip="" enabled="false"
+			font_name="Arial" font_style="plain" font_size="13" visible="true" />
+		<label name="nombre" text="Nombre" tool_tip="" enabled="false"
+			font_name="Arial" font_style="plain" font_size="13" visible="true" />
+		<label name="apellido" text="Apellido" tool_tip="" enabled="false"
+			font_name="Arial" font_style="plain" font_size="13" visible="true" />
+		<label name="email" text="Email" tool_tip="" enabled="false"
+			font_name="Arial" font_style="plain" font_size="13" visible="true" />
+		<label name="confirmEmail" text="Confirmar Email" tool_tip="" enabled="false"
+			font_name="Arial" font_style="plain" font_size="13" visible="true" />
+		<label name="descripcion" text="Descripción" tool_tip=""
+			font_name="Arial" font_style="plain" font_size="13" enabled="false"
+			visible="true" />
+		<label name="perfiles" text="Perfiles del usuario seleccionado" tool_tip=""
+			font_name="Arial" font_style="bold" font_size="13" enabled="true"
+			visible="false" />
+		<label name="listadoUsuarios" text="Listado de usuarios" tool_tip=""
+			font_name="Arial" font_style="bold" font_size="13" enabled="true"
+			visible="false" />
+		<label name="modulos" text="Módulos del perfil seleccionado" tool_tip=""
+			font_name="Arial" font_style="bold" font_size="13" enabled="true"
+			visible="false" />
+		<label name="listadoPerfiles" text="Listado de perfiles" tool_tip=""
+			font_name="Arial" font_style="bold" font_size="13" enabled="true"
+			visible="false" />
+		<label name="listadoModulos" text="Listado de módulos" tool_tip=""
+			font_name="Arial" font_style="bold" font_size="13" enabled="true"
+			visible="false" />
+		<label name="listadoTipoPermiso" text="Listado de tipos de permiso" tool_tip=""
+			font_name="Arial" font_style="bold" font_size="13" enabled="true"
+			visible="false" />
+	</labels>
+
+	<buttons>
+		<button name="ok" icon="" text="Ok" tool_tip="Confirma las acciones"
+			font_name="Arial" font_style="plain" font_size="13" enabled="false"
+			visible="true"
+			action_listener="com.deportel.editor.administracion.view.listener.AEActionListener" />
+		<button name="cancel" icon="" text="Cancelar" tool_tip="Cancela las acciones"
+			font_name="Arial" font_style="plain" font_size="13" enabled="false"
+			visible="true"
+			action_listener="com.deportel.editor.administracion.view.listener.AEActionListener" />
+		<button name="addModule" icon="" text="Agregar" tool_tip=""
+			font_name="Arial" font_style="plain" font_size="13" enabled="false"
+			visible="true"
+			action_listener="com.deportel.editor.administracion.view.listener.PerfilActionListener" />
+		<button name="delModule" icon="" text="Eliminar" tool_tip=""
+			font_name="Arial" font_style="plain" font_size="13" enabled="false"
+			visible="true"
+			action_listener="com.deportel.editor.administracion.view.listener.PerfilActionListener" />
+		<button name="addPerfil" icon="" text="Agregar" tool_tip=""
+			font_name="Arial" font_style="plain" font_size="13" enabled="false"
+			visible="true"
+			action_listener="com.deportel.editor.administracion.view.listener.UsuarioActionListener" />
+		<button name="delPerfil" icon="" text="Eliminar" tool_tip=""
+			font_name="Arial" font_style="plain" font_size="13" enabled="false"
+			visible="true"
+			action_listener="com.deportel.editor.administracion.view.listener.UsuarioActionListener" />
+		<button name="generatePassword" icon="" text="Generar contraseña" tool_tip="Genera una nueva contraseña. Al dar Ok se le enviará al usuario al correo especificado"
+			font_name="Arial" font_style="plain" font_size="13" enabled="false"
+			visible="true"
+			action_listener="com.deportel.editor.administracion.view.listener.UsuarioActionListener" />
+	</buttons>
+
+	<tables>
+		<!-- Actualizar la cantidad de columnas en la clase Contants -->
+		<table name="tipoPermiso" column_names="Id,Nombre,Descripción"
+			column_widths="60,400,700" model="com.deportel.editor.common.gui.EditorTableModel"
+			cell_renderer="com.deportel.editor.common.gui.EditorTableCellRenderer"
+			font_name="Arial" font_style="plain" font_size="13" header_font_name="Arial"
+			header_font_style="bold" header_font_size="13" background_color="ECF8FB"
+			foreground_color="000000"
+			focus_listener="com.deportel.editor.administracion.view.listener.AEFocusListener"
+			enabled="true" visible="true" />
+		<table name="perfil" column_names="Id,Nombre,Descripción,Estado"
+			column_widths="60,280,530,100" model="com.deportel.editor.common.gui.EditorTableModel"
+			cell_renderer="com.deportel.editor.common.gui.EditorTableCellRenderer"
+			font_name="Arial" font_style="plain" font_size="13" header_font_name="Arial"
+			header_font_style="bold" header_font_size="13" background_color="ECF8FB"
+			foreground_color="000000"
+			action_listener="com.deportel.editor.administracion.view.listener.AEActionListener"
+			focus_listener="com.deportel.editor.administracion.view.listener.AEFocusListener"
+			selection_listener="com.deportel.editor.administracion.view.listener.AETableSelectionListener"
+			enabled="true" visible="true" />
+		<table name="usuario" column_names="Id,Alias,Nombre,Apellido,Estado"
+			column_widths="60,210,210,380,100" model="com.deportel.editor.common.gui.EditorTableModel"
+			cell_renderer="com.deportel.editor.common.gui.EditorTableCellRenderer"
+			font_name="Arial" font_style="plain" font_size="13" header_font_name="Arial"
+			header_font_style="bold" header_font_size="13" background_color="ECF8FB"
+			foreground_color="000000"
+			focus_listener="com.deportel.editor.administracion.view.listener.AEFocusListener"
+			selection_listener="com.deportel.editor.administracion.view.listener.AETableSelectionListener"
+			enabled="true" visible="true" />
+		<table name="modulo" column_names="Id,Nombre,Descripción,Estado"
+			column_widths="60,300,600,60" model="com.deportel.editor.common.gui.EditorTableModel"
+			cell_renderer="com.deportel.editor.common.gui.EditorTableCellRenderer"
+			font_name="Arial" font_style="plain" font_size="13" header_font_name="Arial"
+			header_font_style="bold" header_font_size="13" background_color="ECF8FB"
+			foreground_color="000000"
+			focus_listener="com.deportel.editor.administracion.view.listener.AEFocusListener"
+			enabled="true" visible="true" />
+		<table name="modulosPerfil" column_names="Modulo,Tipo Permiso"
+			column_widths="300,300" model="com.deportel.editor.common.gui.EditorTableModel"
+			cell_renderer="com.deportel.editor.common.gui.EditorTableCellRenderer"
+			font_name="Arial" font_style="plain" font_size="13" header_font_name="Arial"
+			header_font_style="bold" header_font_size="13" background_color="ECF8FB"
+			foreground_color="000000" editable="true"
+			focus_listener="com.deportel.editor.administracion.view.listener.AEFocusListener"
+			enabled="false" visible="true" />
+		<table name="perfilesUsuario" column_names="Perfil"
+			model="com.deportel.editor.common.gui.EditorTableModel" cell_renderer="com.deportel.editor.common.gui.EditorTableCellRenderer"
+			font_name="Arial" font_style="plain" font_size="13" header_font_name="Arial"
+			header_font_style="bold" header_font_size="13" background_color="ECF8FB"
+			foreground_color="000000" editable="true"
+			focus_listener="com.deportel.editor.administracion.view.listener.AEFocusListener"
+			enabled="false" visible="true" />
+		<table name="perfilCrossData" column_names="Módulo, Tipo de Permiso"
+			column_widths="300,300" model="com.deportel.editor.common.gui.EditorTableModel"
+			cell_renderer="com.deportel.editor.common.gui.EditorTableCellRenderer"
+			font_name="Arial" font_style="plain" font_size="13" header_font_name="Arial"
+			header_font_style="bold" header_font_size="13" background_color="ECF8FB"
+			foreground_color="000000" focus_listener="" enabled="false" visible="true" />
+		<table name="userCrossData" column_names="Perfil" column_widths="500"
+			model="com.deportel.editor.common.gui.EditorTableModel" cell_renderer="com.deportel.editor.common.gui.EditorTableCellRenderer"
+			font_name="Arial" font_style="plain" font_size="13" header_font_name="Arial"
+			header_font_style="bold" header_font_size="13" background_color="ECF8FB"
+			foreground_color="000000" focus_listener="" enabled="false" visible="true" />
+	</tables>
+
+	<text_fields>
+		<text_field name="alias" text="" tool_tip="Ingrese el alias"
+			font_name="Arial" font_style="plain" font_size="13" focus_listener=""
+			enabled="false" visible="true" text_limit="40"/>
+		<text_field name="nombre" text="" tool_tip="Ingrese el nombre"
+			font_name="Arial" font_style="plain" font_size="13" focus_listener=""
+			enabled="false" visible="true" text_limit="40"/>
+		<text_field name="apellido" text="" tool_tip="Ingrese el apellido"
+			font_name="Arial" font_style="plain" font_size="13" focus_listener=""
+			enabled="false" visible="true" text_limit="40"/>
+		<text_field name="email" text="" tool_tip="Ingrese el email"
+			font_name="Arial" font_style="plain" font_size="13" focus_listener=""
+			enabled="false" visible="true" text_limit="100"/>
+		<text_field name="confirmEmail" text="" tool_tip="Re ingrese el email"
+			font_name="Arial" font_style="plain" font_size="13" focus_listener=""
+			enabled="false" visible="true" text_limit="100"/>
+		<text_field name="descripcion" text="" font_name="Arial"
+			font_style="plain" font_size="13" tool_tip="Ingrese la descripción"
+			focus_listener="" enabled="false" visible="true" text_limit="200"/>
+		<password_field name="password" text="" tool_tip=""
+			focus_listener="" enabled="false" visible="true" text_limit="12"/>
+	</text_fields>
+
+	<menu_bars>
+		<menu_bar name="editorAdministracion" tool_tip="" enabled="true">
+			<menu name="item" text="Vistas" tool_tip="" enabled="true"
+				font_name="Arial" font_style="plain" font_size="13">
+				<radio_button_menu_item name="modulo" text="Módulos"
+					font_name="Arial" font_style="plain" font_size="13" tool_tip=""
+					enabled="true"
+					action_listener="com.deportel.editor.administracion.view.listener.AEMenuItemListener" />
+				<radio_button_menu_item name="perfil" text="Perfiles"
+					font_name="Arial" font_style="plain" font_size="13" tool_tip=""
+					enabled="true"
+					action_listener="com.deportel.editor.administracion.view.listener.AEMenuItemListener" />
+				<radio_button_menu_item name="tipoPermiso"
+					font_name="Arial" font_style="plain" font_size="13" text="Tipo de Permisos"
+					tool_tip="" enabled="true"
+					action_listener="com.deportel.editor.administracion.view.listener.AEMenuItemListener" />
+				<radio_button_menu_item name="usuario" text="Usuarios"
+					font_name="Arial" font_style="plain" font_size="13" tool_tip=""
+					enabled="true"
+					action_listener="com.deportel.editor.administracion.view.listener.AEMenuItemListener" />
+			</menu>
+		</menu_bar>
+	</menu_bars>
+
+	<tool_bars>
+		<tool_bar name="tools" enabled="true" tool_tip="">
+			<button name="new" text="" icon="/images/new_icon.png"
+				tool_tip="Nuevo"
+				action_listener="com.deportel.editor.administracion.view.listener.AEActionListener"
+				enabled="false" visible="true" />
+			<button name="edit" text="" icon="/images/edit_icon.png"
+				tool_tip="Modificar"
+				action_listener="com.deportel.editor.administracion.view.listener.AEActionListener"
+				enabled="false" visible="true" />
+			<button name="delete" text="" icon="/images/delete_icon.png"
+				tool_tip="Eliminar"
+				action_listener="com.deportel.editor.administracion.view.listener.AEActionListener"
+				enabled="false" visible="true" />
+		</tool_bar>
+	</tool_bars>
+
+	<binded_combos>
+		<binded_combo name="tipoPermiso" text=""
+			tool_tip="Elija el tipo de componente al que se le adjuntará la consulta"
+			font_name="Arial" font_style="plain" font_size="13" list="" enabled="true"
+			visible="true"
+			action_listener="com.deportel.editor.administracion.view.listener.AEComboListener" />
+		<binded_combo name="modulo" text=""
+			tool_tip="Elija el tipo de componente al que se le adjuntará la consulta"
+			font_name="Arial" font_style="plain" font_size="13" list="" enabled="true"
+			visible="true"
+			action_listener="com.deportel.editor.administracion.view.listener.AEComboListener" />
+		<binded_combo name="perfil" text=""
+			tool_tip="Elija el tipo de componente al que se le adjuntará la consulta"
+			font_name="Arial" font_style="plain" font_size="13" list="" enabled="true"
+			visible="true"
+			action_listener="com.deportel.editor.administracion.view.listener.AEComboListener" />
+	</binded_combos>
+
+	<check_boxes>
+		<check_box name="estado" text="Habilitado" tool_tip="Seleccionar estado"
+			font_name="Arial" font_style="plain" font_size="13" selected="true"
+			enabled="false" visible="true" action_listener="" />
+	</check_boxes>
+</gui>

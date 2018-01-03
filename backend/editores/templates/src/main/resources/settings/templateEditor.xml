@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<gui xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://svn3.xp-dev.com/svn/Futboltel/trunk/Implementacion/fulboltel/guibuilder/src/main/resources/gui.xsd">
+
+	<panels>
+		<panel name="global" tool_tip="" layout="org.jdesktop.layout.GroupLayout"
+			font_name="Arial" font_style="plain" font_size="13" border=""
+			enabled="true" visible="true" />
+
+		<!-- Importacion de XML -->
+		<panel name="import" tool_tip="" layout="org.jdesktop.layout.GroupLayout"
+			font_name="Arial" font_style="plain" font_size="13" border=""
+			enabled="true" visible="false" />
+		<panel name="importBrowse" tool_tip=""
+			layout="org.jdesktop.layout.GroupLayout" font_name="Arial"
+			font_style="bold" font_size="13" border="" enabled="true" visible="true" />
+		<panel name="importDebrief" tool_tip=""
+			layout="org.jdesktop.layout.GroupLayout" font_name="Arial"
+			font_style="bold" font_size="13" border="" enabled="true" visible="true" />
+		<panel name="importDebriefDetails" tool_tip=""
+			layout="org.jdesktop.layout.GroupLayout" font_name="Arial"
+			font_style="plain" font_size="13" border="" enabled="true" visible="true" />
+
+		<!-- Creacion / Edicion de componente -->
+		<panel name="componentCreateGlobal" tool_tip=""
+			layout="org.jdesktop.layout.GroupLayout" border="" enabled="true"
+			font_name="Arial" font_style="plain" font_size="13" visible="false" />
+		<panel name="componentEdition" tool_tip=""
+			layout="org.jdesktop.layout.GroupLayout" border="" enabled="true"
+			font_name="Arial" font_style="bold" font_size="13" visible="true" />
+		<panel name="componentEditionScroll" tool_tip=""
+			layout="org.jdesktop.layout.GroupLayout" border="" enabled="true"
+			font_name="Arial" font_style="plain" font_size="13" visible="true" />
+		<panel name="componentSelection" tool_tip="" font_name="Arial"
+			font_style="bold" font_size="13" layout="org.jdesktop.layout.GroupLayout"
+			border="" enabled="true" visible="true" />
+
+		<!-- Edicion de imagenes -->
+		<panel name="eiGlobal" tool_tip="" font_name="Arial" font_style="bold"
+			font_size="13" layout="org.jdesktop.layout.GroupLayout" border=""
+			enabled="true" visible="true" />
+		<panel name="eiDetailsGeneral" tool_tip="" font_name="Arial"
+			font_style="plain" font_size="13" layout="org.jdesktop.layout.GroupLayout"
+			border="" enabled="true" visible="true" />
+		<panel name="eiDetails" tool_tip="" font_name="Arial"
+			font_style="plain" font_size="13" layout="org.jdesktop.layout.GroupLayout"
+			border="" enabled="true" visible="true" />
+		<panel name="eiTools" tool_tip="" font_name="Arial" font_style="plain"
+			font_size="13" layout="org.jdesktop.layout.GroupLayout" border=""
+			enabled="true" visible="true" />
+		<panel name="eiSelection" tool_tip="" font_name="Arial"
+			font_style="plain" font_size="13" layout="org.jdesktop.layout.GroupLayout"
+			border="" enabled="true" visible="true" />
+	</panels>
+
+	<binded_combos>
+		<binded_combo name="selTema" font_name="Arial"
+			font_style="plain" font_size="13" first_item_empty="true"
+			tool_tip="Elija el tipo de componente a editar" list="" enabled="true"
+			visible="true" action_listener="com.deportel.editor.template.view.listener.TEActionListener" />
+		<binded_combo name="selTipoComponente" font_name="Arial"
+			font_style="plain" font_size="13" first_item_empty="true"
+			tool_tip="Elija el tipo de componente a editar" list="" enabled="false"
+			visible="true" action_listener="com.deportel.editor.template.view.listener.TEActionListener" />
+		<binded_combo name="selComponente" font_name="Arial"
+			font_style="plain" font_size="13" first_item_empty="true"
+			tool_tip="Elija el componente a editar" list="" enabled="false"
+			visible="true" action_listener="com.deportel.editor.template.view.listener.TEActionListener" />
+	</binded_combos>
+
+	<labels>
+		<label name="browse" text="Archivo de componentes" tool_tip=""
+			font_name="Arial" font_style="plain" font_size="13" enabled="true"
+			visible="true" />
+		<label name="selTema" text="Tema de la aplicación" tool_tip=""
+			font_name="Arial" font_style="plain" font_size="13" enabled="true"
+			visible="true" />
+		<label name="selTipoComponente" text="Tipo de componente a editar"
+			tool_tip="" font_name="Arial" font_style="plain" font_size="13"
+			enabled="true" visible="true" />
+		<label name="selComponente" text="Componente a editar" tool_tip=""
+			font_name="Arial" font_style="plain" font_size="13" enabled="true"
+			visible="true" />
+		<label name="importDebriefDetails" text="Componentes Cargados"
+			tool_tip="" font_name="Arial" font_style="plain" font_size="13"
+			enabled="true" visible="true" />
+	</labels>
+
+	<scroll_panes>
+		<scroll_pane name="componentEdition" enabled="true"
+			visble="false" />
+		<scroll_pane name="importDebriefDetails" enabled="true"
+			visble="false" />
+		<scroll_pane name="eiDetails" enabled="true" visble="true" />
+	</scroll_panes>
+
+	<buttons>
+		<button name="browse" text="Explorar" visible="true" enabled="true"
+			tool_tip="Explorar el sistema de archivos"
+			action_listener="com.deportel.editor.template.view.listener.TEActionListener"
+			font_name="Arial" font_style="plain" font_size="13" />
+		<button name="loadFile" text="Cargar" visible="true" enabled="true"
+			tool_tip="Carga archivo el xml"
+			action_listener="com.deportel.editor.template.view.listener.TEActionListener"
+			font_name="Arial" font_style="plain" font_size="13" />
+		<button name="okImport" text="Importar" visible="true" enabled="false"
+			tool_tip="Importa el xml persistiendo los datos en la base"
+			action_listener="com.deportel.editor.template.view.listener.TEActionListener"
+			font_name="Arial" font_style="plain" font_size="13" />
+		<button name="cancelImport" text="Cancelar" visible="true"
+			enabled="false" tool_tip="Cancela la importación"
+			action_listener="com.deportel.editor.template.view.listener.TEActionListener"
+			font_name="Arial" font_style="plain" font_size="13" />
+		<button name="cancelEdit" text="Cancelar" visible="true"
+			enabled="true" tool_tip="Cancela la edición del componente"
+			action_listener="com.deportel.editor.template.view.listener.TEActionListener"
+			font_name="Arial" font_style="plain" font_size="13" />
+		<button name="cancelImageEdit" text="Cancelar" visible="true"
+			enabled="true" tool_tip="Cancela la edición de la imagen del componente"
+			action_listener="com.deportel.editor.template.view.listener.TEActionListener"
+			font_name="Arial" font_style="plain" font_size="13" />
+		<button name="eiAddImage" text="Agregar" visible="true"
+			enabled="true" tool_tip="Agrega los controles para ingresar  una nueva imagen"
+			action_listener="com.deportel.editor.template.view.listener.TEActionListener"
+			font_name="Arial" font_style="plain" font_size="13" />
+		<button name="eiDone" text="Listo" visible="true" enabled="true"
+			tool_tip="Finaliza la selección de sources"
+			action_listener="com.deportel.editor.template.view.listener.TEActionListener"
+			font_name="Arial" font_style="plain" font_size="13" />
+		<button name="propEditDone" text="Listo" visible="true"
+			enabled="true" tool_tip="Finaliza la edicion de la propiedad"
+			font_name="Arial" font_style="plain" font_size="13" />
+	</buttons>
+
+	<text_fields>
+		<text_field name="browse" visible="true" enabled="true" />
+	</text_fields>
+
+	<tool_bars>
+		<tool_bar name="templatesEditor" tool_tip="" enabled="true"
+			visible="true">
+			<button name="tiMode" text="" icon="/images/import_icon.png"
+				tool_tip="Importar componentes desde XML"
+				action_listener="com.deportel.editor.template.view.listener.TEActionListener"
+				enabled="true" visible="true" />
+			<button name="ceNewMode" text="" icon="/images/new_icon.png"
+				tool_tip="Crear un nuevo componente"
+				action_listener="com.deportel.editor.template.view.listener.TEActionListener"
+				enabled="false" visible="true" />
+			<button name="ieMode" text="" icon="/images/images_icon.png"
+				tool_tip="Editar imagenes"
+				action_listener="com.deportel.editor.template.view.listener.TEActionListener"
+				enabled="true" visible="true" />
+			<button name="ceEditMode" text="" icon="/images/edit_icon.png"
+				tool_tip="Editar componentes"
+				action_listener="com.deportel.editor.template.view.listener.TEActionListener"
+				enabled="true" visible="true" />
+			<button name="ceDeleteMode" text="" icon="/images/delete_icon.png"
+				tool_tip="Eliminar componentes"
+				action_listener="com.deportel.editor.template.view.listener.TEActionListener"
+				enabled="false" visible="true" />
+			<button name="save" text="" icon="/images/save_icon.png"
+				tool_tip="Guardar el componente"
+				action_listener="com.deportel.editor.template.view.listener.TEActionListener"
+				enabled="false" visible="false" />
+		</tool_bar>
+	</tool_bars>
+
+	<check_boxes>
+		<check_box name="paraContenido" text="Componentes para contenido"
+			tool_tip="Seleccionar para importar como componentes para contenido"
+			font_name="Arial" font_style="plain" font_size="13" selected="false"
+			enabled="true" visible="true" action_listener="" />
+	</check_boxes>
+</gui>

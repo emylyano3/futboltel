@@ -1,0 +1,113 @@
+<userInput>
+	<panel order="0">
+		<createForPack name="Base de Datos" />
+		<field type="title" txt="Configuración del motor de base de datos" bold="true" size="1" />
+		<field type="staticText" align="left" txt="Ingrese la ubicación del motor de base de datos" />
+		<field type="divider" align="top" />
+		<field type="search" variable="mysql.home">
+			<spec txt="Path a MySQL:" id="mysqlhome.label" size="30" type="directory" result="directory" checkfilename="mysql.exe">
+				<choice value="C:\MySQL\MySQLServer5.1\bin" os="windows" />
+				<choice value="C:\MySQL\MySQLServer 5.1\bin" os="windows" />
+				<choice value="C:\MySQL\MySQLServer5.5\bin" os="windows" />
+				<choice value="C:\MySQL\MySQLServer 5.5\bin" os="windows" />
+				<choice value="C:\MySQL\MySQLServer5\bin" os="windows" />
+				<choice value="C:\MySQL\MySQLServer 5\bin" os="windows" />
+				<choice value="C:\MySQL\MySQLServer5.0\bin" os="windows" />
+				<choice value="C:\MySQL\MySQLServer 5.0\bin" os="windows" />
+				<choice value="C:\MySQLServer5.1\bin" os="windows" />
+				<choice value="C:\MySQLServer 5.1\bin" os="windows" />
+				<choice value="C:\MySQLServer5.5\bin" os="windows" />
+				<choice value="C:\MySQLServer 5.5\bin" os="windows" />
+				<choice value="C:\MySQLServer5\bin" os="windows" />
+				<choice value="C:\MySQLServer 5\bin" os="windows" />
+				<choice value="C:\MySQLServer5.0\bin" os="windows" />
+				<choice value="C:\MySQLServer 5.0\bin" os="windows" />
+				<choice value="C:\MySQL\bin" os="windows" />
+				<choice value="C:\Program Files\MySQL\bin" os="windows" />
+				<choice value="C:\Program Files\MySQL\MySQLServer5.1\bin" os="windows" />
+				<choice value="C:\Program Files\MySQL\MySQLServer 5.1\bin" os="windows" />
+				<choice value="C:\Program Files\MySQL\MySQLServer5.5\bin" os="windows" />
+				<choice value="C:\Program Files\MySQL\MySQLServer 5.5\bin" os="windows" />
+				<choice value="C:\Program Files\MySQL\MySQLServer5\bin" os="windows" />
+				<choice value="C:\Program Files\MySQL\MySQLServer 5\bin" os="windows" />
+				<choice value="C:\Program Files\MySQL\MySQLServer5.0\bin" os="windows" />
+				<choice value="C:\Program Files\MySQL\MySQLServer 5.0\bin" os="windows" />
+				<choice value="C:\Program Files\MySQLServer5.1\bin" os="windows" />
+				<choice value="C:\Program Files\MySQLServer 5.1\bin" os="windows" />
+				<choice value="C:\Program Files\MySQLServer5.5\bin" os="windows" />
+				<choice value="C:\Program Files\MySQLServer 5.5\bin" os="windows" />
+				<choice value="C:\Program Files\MySQLServer5\bin" os="windows" />
+				<choice value="C:\Program Files\MySQLServer 5\bin" os="windows" />
+				<choice value="C:\Program Files\MySQLServer5.0\bin" os="windows" />
+				<choice value="C:\Program Files\MySQLServer 5.0\bin" os="windows" />
+
+				<choice value="C:\MySQL\MySQL Server 5.1\bin" os="windows" />
+				<choice value="C:\MySQL\MySQL Server 5.5\bin" os="windows" />
+				<choice value="C:\MySQL\MySQL Server 5\bin" os="windows" />
+				<choice value="C:\MySQL\MySQL Server 5.0\bin" os="windows" />
+				<choice value="C:\MySQL Server 5.1\bin" os="windows" />
+				<choice value="C:\MySQL Server 5.5\bin" os="windows" />
+				<choice value="C:\MySQL Server 5\bin" os="windows" />
+				<choice value="C:\MySQL Server 5.0\bin" os="windows" />
+				<choice value="C:\MySQL\bin" os="windows" />
+				<choice value="C:\Program Files\MySQL\bin" os="windows" />
+				<choice value="C:\Program Files\MySQL\MySQL Server 5.1\bin" os="windows" />
+				<choice value="C:\Program Files\MySQL\MySQL Server 5.5\bin" os="windows" />
+				<choice value="C:\Program Files\MySQL\MySQL Server 5\bin" os="windows" />
+				<choice value="C:\Program Files\MySQL\MySQL Server 5.0\bin" os="windows" />
+				<choice value="C:\Program Files\MySQL Server 5.1\bin" os="windows" />
+				<choice value="C:\Program Files\MySQL Server 5.5\bin" os="windows" />
+				<choice value="C:\Program Files\MySQL Server 5\bin" os="windows" />
+				<choice value="C:\Program Files\MySQL Server 5.0\bin" os="windows" />
+			</spec>
+		</field>
+	</panel>
+	<panel order="1">
+		<createForPack name="Herramientas" />
+		<field type="title" txt="Configuración de la base de datos cliente" bold="true" size="1" />
+		<field type="staticText" align="left" txt="Configure su conexión a la base de datos cliente" />
+		<field type="divider" align="top" />
+		<field type="text" variable="client.db.host">
+			<spec txt="Host de la base:" id="dbhost.label" size="20" set="localhost" />
+			<validator class="com.izforge.izpack.util.NotEmptyValidator" txt="El host es obligatorio" />
+		</field>
+		<field type="text" variable="client.db.port">
+			<spec txt="Puerto de la base:" id="dbport.label" size="20" set="3306" />
+			<validator class="com.izforge.izpack.util.NotEmptyValidator" txt="El puerto es obligatorio" />
+		</field>
+		<field type="text" variable="client.db.user">
+			<spec txt="Usuario:" id="dbuser.label" size="20" set="" />
+			<validator class="com.izforge.izpack.util.NotEmptyValidator" txt="El usuario es obligatorio" />
+		</field>
+		<field type="password" align="left" variable="client.db.pass">
+			<spec>
+				<pwd txt="Contraseña:" size="20" set="" />
+			</spec>
+			<validator class="com.izforge.izpack.util.NotEmptyValidator" txt="La contraseña es obligatoria" />
+		</field>
+	</panel>
+		<panel order="2">
+		<createForPack name="Herramientas" />
+		<field type="title" txt="Configuración de la base de datos futboltel" bold="true" size="1" />
+		<field type="staticText" align="left" txt="Configure su conexión a la base de datos futboltel" />
+		<field type="divider" align="top" />
+		<field type="text" variable="db.host">
+			<spec txt="Host de la base:" id="dbhost.label" size="20" set="localhost" />
+			<validator class="com.izforge.izpack.util.NotEmptyValidator" txt="El host es obligatorio" />
+		</field>
+		<field type="text" variable="db.port">
+			<spec txt="Puerto de la base:" id="dbport.label" size="20" set="3306" />
+			<validator class="com.izforge.izpack.util.NotEmptyValidator" txt="El puerto es obligatorio" />
+		</field>
+		<field type="text" variable="db.user">
+			<spec txt="Usuario:" id="dbuser.label" size="20" set="" />
+			<validator class="com.izforge.izpack.util.NotEmptyValidator" txt="El usuario es obligatorio" />
+		</field>
+		<field type="password" align="left" variable="db.pass">
+			<spec>
+				<pwd txt="Contraseña:" size="20" set="" />
+			</spec>
+			<validator class="com.izforge.izpack.util.NotEmptyValidator" txt="La contraseña es obligatoria" />
+		</field>
+	</panel>
+</userInput>

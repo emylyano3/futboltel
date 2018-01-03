@@ -1,0 +1,6 @@
+<APP id="J0000001" name="JFutboltel" ep="R1000000" bgc="JDBD7D0" fgc="J6C583D" alc="JF6840B" rcx="J0" rcy="J0" rcw="J100" rch="J100" tstamp="J0" uti="J1" childs="J0" flags="J3" >
+	<SCR id="J1000016" name="JSCR_Noticia" bgc="JECE7DF" fgc="J1000000" alc="J1000000" rcx="J0" rcy="J0" rcw="J100" rch="J100" flags="J2F" lsk="J" rsk="J" tstamp="J0" uti="J1" childs="J0" action="J0" aparam="J0" next="J0" previous="J0" >
+		<LAB id="J800003A" name="JLAB_Noticia" rcx="J0" rcy="J9" rcw="J100" rch="J8" text="JNoticia Seleccionada" bgc="JECE7DF" fgc="J6C583D" alc="JF6840B" flags="J1A" tstamp="J0" uti="J1" anc="J20" tal="J17" marx="J0" mary="J0" fty="J1" />
+		<SCV id="J3000017" name="JSCV_Noticia" rcx="J0" rcy="J17" rcw="J100" rch="J62" lsk="JVolver" rsk="J" bgc="JECE7DF" fgc="J776347" alc="JF6840B" flags="JDF" xsc="J0" ysc="J0" tstamp="J0" uti="J1" childs="J0" marx="J4" mary="J5" />
+	</SCR>
+</APP>

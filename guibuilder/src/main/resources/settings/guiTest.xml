@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<gui xmlns="http://www.w3schools.com"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://svn3.xp-dev.com/svn/Futboltel/trunk/Implementacion/fulboltel/guibuilder/src/main/resources/gui.xsd">
+	
+	<buttons>
+		<button name="Aceptar" action_listener="" icon="" text="Aceptar" tool_tip="Confirma el ingreso de datos" enabled="true"/>
+		<button name="Cancelar" action_listener="" icon="" text="Cancelar" tool_tip="Cancela el ingreso de datos" enabled="true"/>
+	</buttons>
+		
+	<text_fields>
+		<text_field name="User" text="" tool_tip="Ingrese su nombre de usuario" enabled="true"/>
+		<password_field name="Pass" text="" tool_tip="Ingrese su clave de usuario" enabled="true"/>
+	</text_fields>
+	
+<!-- 
+	<combo_boxes>
+		<combo_box name="Dominio" list="futboltel, deportel" tool_tip="Elija el dominio" enabled="true"/>
+	</combo_boxes>
+ -->
+	
+	<labels>
+		<label name="User" text="Nombre de usuario" icon="" tool_tip="" enabled="true"/>
+		<label name="Pass" text="Contraseña" icon="" tool_tip="" enabled="true"/>
+	</labels>
+
+ 	
+	<panels>
+		<panel name="General" text="" tool_tip="" enabled="true"/>
+		<tabbed_panel name="General1" text="" tool_tip="" enabled="true"/>
+	</panels>
+
+
+	<menu_bars>
+		<menu_bar name="Principal" tool_tip="Barra de menu de la ventana principal" enabled="true">
+			<menu name="File" text="Archivo" tool_tip="" enabled="true" >
+				<menu_item name="NewFile" text="New" tool_tip="" enabled="true" action_listener="" />
+				<menu_item name="OpenFile" text="Open" tool_tip="" enabled="true" action_listener="" />
+			</menu>
+		</menu_bar>
+	</menu_bars>
+	
+<!-- 	
+	<state_bars>
+		<state_bar name="Estado" enabled="true" tool_tip="Barra de estado"/>
+	</state_bars>
+ -->
+ 
+</gui>
+

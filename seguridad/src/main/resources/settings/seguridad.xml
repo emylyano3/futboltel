@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<gui xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://svn3.xp-dev.com/svn/Futboltel/trunk/Implementacion/fulboltel/guibuilder/src/main/resources/gui.xsd">
+
+	<buttons>
+		<button name="aceptar" action_listener="" icon="" text="Aceptar"
+			font_name="Arial" font_style="plain" font_size="13"
+			tool_tip="Confirma el ingreso de datos" enabled="true" />
+		<button name="cancelar" action_listener="" icon="" text="Cancelar"
+			font_name="Arial" font_style="plain" font_size="13"
+			tool_tip="Cancela el ingreso de datos" enabled="true" />
+		<button name="pr_confirm"
+			action_listener="com.deportel.seguridad.view.listener.SeguridadActionListener"
+			icon="" text="Confirmar" font_name="Arial" font_style="plain"
+			font_size="13" tool_tip="Cancela el ingreso de datos" enabled="true" />
+	</buttons>
+
+	<text_fields>
+		<text_field name="user" text="admin" tool_tip="Ingrese su nombre de usuario"
+			font_name="Arial" font_style="plain" font_size="13" enabled="true" />
+		<password_field name="pass" text="admin"
+			font_name="Arial" font_style="plain" font_size="13"
+			tool_tip="Ingrese su clave de usuario" enabled="true" text_limit="12" />
+		<text_field name="pr_alias" text="" font_name="Arial"
+			font_style="plain" font_size="13" tool_tip="Ingrese su nombre de usuario"
+			enabled="true" text_limit="45" />
+	</text_fields>
+
+	<labels>
+		<label name="user" text="Usuario" icon="" tool_tip="" font_name="Arial"
+			font_style="plain" font_size="13" enabled="true" />
+		<label name="pass" text="Contraseña" icon="" tool_tip=""
+			font_name="Arial" font_style="plain" font_size="13" enabled="true" />
+		<label name="forgot_pass" text="Olvidé mi constraseña" icon=""
+			tool_tip="" font_name="Arial" font_style="plain" font_size="11"
+			foreground_color="5555FF" enabled="true"
+			mouse_listener="com.deportel.seguridad.view.listener.SeguridadMouseListener" />
+		<label name="pr_alias" text="Usuario" icon="" tool_tip=""
+			font_name="Arial" font_style="plain" font_size="13" enabled="true" />
+	</labels>
+
+	<panels>
+		<panel name="general" text="" tool_tip="" font_name="Arial"
+			font_style="bold" font_size="13" layout="org.jdesktop.layout.GroupLayout"
+			enabled="true" />
+		<panel name="pr_general" text="" tool_tip="" font_name="Arial"
+			font_style="bold" font_size="13" layout="org.jdesktop.layout.GroupLayout"
+			enabled="true" />
+		<panel name="pr_input" text="" tool_tip="" font_name="Arial"
+			font_style="bold" font_size="13" layout="org.jdesktop.layout.GroupLayout"
+			enabled="true" />
+		<panel name="pr_confirm" text="" tool_tip="" font_name="Arial"
+			font_style="bold" font_size="13" layout="org.jdesktop.layout.GroupLayout"
+			enabled="true" />
+	</panels>
+
+</gui>

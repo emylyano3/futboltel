@@ -1,0 +1,3 @@
+PACKAGE_NAME=com.deportel.editor.contenido.view
+GUI_DEFINITION_NAME=contenidoEditor.xml
+PROJECT_PATH=C:/workspaces/ws_futboltel/futboltel/backend/editores/contenido

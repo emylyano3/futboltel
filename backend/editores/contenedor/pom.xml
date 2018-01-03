@@ -1,0 +1,135 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>deportel.futboltel.backend</groupId>
+		<artifactId>editores</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>deportel.futboltel.backend.editores</groupId>
+	<artifactId>contenedor</artifactId>
+	<version>${editores-contenedor-version}</version>
+	<name>Editores-Contenedor</name>
+	<description>Contenedor de todos los editores</description>
+
+	<build>
+		<plugins>
+
+			<!-- this makes maven to compile and package your related izpack sources 
+				into a predictable name and location ie your target directory's ${project.artifactId}.jar, 
+				to that you can configure your izpack descriptor to merge it to finally installer 
+				via <jar> tag <finalName>${project.artifactId}</finalName> <plugin> use the 
+				helps from other Maven plugin to produce a staging area prior to package 
+				phase, example target/staging </plugin> -->
+			<!-- 
+			<plugin>
+				<groupId>org.codehaus.izpack</groupId>
+				<artifactId>izpack-maven-plugin</artifactId>
+				<version>1.0-alpha-5</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>izpack</goal>
+						</goals>
+						<configuration>
+							<izpackBasedir>${your.staging.dir}</izpackBasedir>
+						</configuration>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>org.codehaus.izpack</groupId>
+						<artifactId>izpack-standalone-compiler</artifactId>
+						<version>4.3.5</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.3.1</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.deportel.futboltel.main.Contenedor</mainClass>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>C:/Users/Emy/.m2/repository/</classpathPrefix>
+							<classpathLayoutType>repository</classpathLayoutType>
+							<classpathMavenRepositoryLayout>true</classpathMavenRepositoryLayout>
+						</manifest>
+						<manifestEntries>
+							<SplashScreen-Image>images/splash.png</SplashScreen-Image>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-jar-plugin</artifactId> 
+				<version>2.3.1</version> <configuration> <archive> <manifest> <mainClass>com.deportel.futboltel.main.Contenedor</mainClass> 
+				<addClasspath>true</addClasspath> <classpathPrefix>C:/Users/Emy/.m2/repository/</classpathPrefix> 
+				<classpathLayoutType>repository</classpathLayoutType> <classpathMavenRepositoryLayout>true</classpathMavenRepositoryLayout> 
+				</manifest> <manifestEntries> <SplashScreen-Image>images/splash.png</SplashScreen-Image> 
+				</manifestEntries> </archive> </configuration> </plugin> -->
+
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<finalName>futboltel</finalName>
+					<descriptors>
+						<descriptor>config/contenedor-assembly.xml</descriptor>
+					</descriptors>
+					<archive>
+						<manifest>
+							<mainClass>com.deportel.futboltel.editor.contenedor.main.Contenedor</mainClass>
+						</manifest>
+						<manifestEntries>
+							<SplashScreen-Image>images/ft-splash.png</SplashScreen-Image>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>deportel.futboltel.backend.editores</groupId>
+			<artifactId>common</artifactId>
+			<version>${editores-common-version}</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.codehaus.izpack</groupId>
+			<artifactId>izpack-standalone-compiler</artifactId>
+			<version>4.3.5</version>
+		</dependency>
+
+<!-- 		<dependency> -->
+<!-- 			<groupId>deportel.futboltel.backend.editores</groupId> -->
+<!-- 			<artifactId>administracion</artifactId> -->
+<!-- 			<version>${editores-administracion-version}</version> -->
+<!-- 			<scope>compile</scope> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>deportel.futboltel.backend.editores</groupId> -->
+<!-- 			<artifactId>contenido</artifactId> -->
+<!-- 			<version>${editores-contenido-version}</version> -->
+<!-- 			<type>jar</type> -->
+<!-- 			<scope>compile</scope> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>deportel.futboltel.backend.editores</groupId> -->
+<!-- 			<artifactId>templates</artifactId> -->
+<!-- 			<version>${editores-templates-version}</version> -->
+<!-- 			<type>jar</type> -->
+<!-- 			<scope>compile</scope> -->
+<!-- 		</dependency> -->
+	</dependencies>
+</project>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:element name="gui">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="buttons" type="buttons" maxOccurs="1" />
+				<xsd:element name="text_areas" type="text_areas" maxOccurs="1" />
+				<xsd:element name="text_fields" type="text_fields" maxOccurs="1" />
+				<xsd:element name="check_boxes" type="check_boxes" maxOccurs="1" />
+				<xsd:element name="combo_boxes" type="combo_boxes" maxOccurs="1" />
+				<xsd:element name="binded_combos" type="binded_combos" maxOccurs="1" />
+				<xsd:element name="labels" type="labels" maxOccurs="1" />
+				<xsd:element name="panels" type="panels" maxOccurs="1" />
+				<xsd:element name="menu_bars" type="menu_bars" maxOccurs="1" />
+				<xsd:element name="state_bars" type="state_bars" maxOccurs="1" />
+				<xsd:element name="tool_bars" type="tool_bars" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<!-- Definicion de grupos de componentes-->
+
+	<xsd:complexType name="buttons">
+		<xsd:sequence>
+			<xsd:element name="button" type="button" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="text_areas">
+		<xsd:sequence>
+			<xsd:element name="text_area" type="text_area" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="text_fields">
+		<xsd:sequence>
+			<xsd:element name="text_field" type="text_field" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="check_boxes">
+		<xsd:sequence>
+			<xsd:element name="check_box" type="check_box" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="combo_boxes">
+		<xsd:sequence>
+			<xsd:element name="combo_box" type="combo_box" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="binded_combos">
+		<xsd:sequence>
+			<xsd:element name="binded_combo" type="binded_combo" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="labels">
+		<xsd:sequence>
+			<xsd:element name="label" type="label" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="panels">
+		<xsd:sequence>
+			<xsd:element name="panel" type="panel" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="menu_bars">
+		<xsd:sequence>
+			<xsd:element name="menu_bar" type="menu_bar" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="state_bars">
+		<xsd:sequence>
+			<xsd:element name="state_bar" type="state_bar" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="tool_bars">
+		<xsd:sequence>
+			<xsd:element name="button" type="button" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<!-- Definicion de tipos de componentes -->
+	
+	<xsd:complexType name="gui_component">
+		<xsd:attribute name="enabled" type="xsd:boolean" default="true" />
+		<xsd:attribute name="name" type="xsd:string" use="required" />
+		<xsd:attribute name="tool_tip" type="xsd:string" />
+	</xsd:complexType>
+
+	<xsd:complexType name="listenable">
+		<xsd:complexContent>
+			<xsd:extension base="gui_component">
+				<xsd:attribute name="action_listener" type="xsd:string"	use="required" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="button">
+		<xsd:complexContent>
+			<xsd:extension base="listenable">
+				<xsd:attribute name="icon" type="xsd:string" />
+				<xsd:attribute name="text" type="xsd:string" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="text_area">
+		<xsd:complexContent>
+			<xsd:extension base="gui_component">
+				<xsd:attribute name="text" type="xsd:string" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="text_field">
+		<xsd:complexContent>
+			<xsd:extension base="gui_component">
+				<xsd:attribute name="text" type="xsd:string" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="check_box">
+		<xsd:complexContent>
+			<xsd:extension base="gui_component">
+				<xsd:attribute name="text" type="xsd:string" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="combo_box">
+		<xsd:complexContent>
+			<xsd:extension base="listenable">
+				<!-- Falta Completar -->
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="binded_combo">
+		<xsd:complexContent>
+			<xsd:extension base="listenable">
+				<!-- Falta Completar -->
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="label">
+		<xsd:complexContent>
+			<xsd:extension base="gui_component">
+				<xsd:attribute name="icon" type="xsd:string" />
+				<xsd:attribute name="text" type="xsd:string" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="panel">
+		<xsd:complexContent>
+			<xsd:extension base="gui_component">
+				<xsd:attribute name="icon" type="xsd:string" />
+				<xsd:attribute name="layout" type="xsd:string" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="menu_bar">
+		<xsd:complexContent>
+			<xsd:extension base="gui_component">
+				<xsd:sequence>
+					<xsd:element name="menu" type="menu" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="menu">
+		<xsd:complexContent>
+			<xsd:extension base="gui_component">
+				<xsd:sequence>
+					<xsd:element name="menu_item" type="menu_item" />
+				</xsd:sequence>
+				<xsd:attribute name="text" type="xsd:string" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="menu_item">
+		<xsd:complexContent>
+			<xsd:extension base="gui_component">
+				<xsd:attribute name="text" type="xsd:string" />
+				<!-- Falta Completar -->
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="state_bar">
+		<xsd:complexContent>
+			<xsd:extension base="gui_component">
+				<!-- Falta Completar -->
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+</xsd:schema>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<shortcuts>
+	<skipIfNotSupported />
+	<programGroup defaultName="Futboltel/Herramientas" location="applications" />
+	<shortcut name="Futboltel" target="$INSTALL_PATH/bin/$APP_LAUNCH_COMMAND" iconFile="$INSTALL_PATH/futboltel.ico"
+		iconIndex="0" programGroup="yes" desktop="yes" applications="no" startMenu="yes" startup="no" workingDirectory="$INSTALL_PATH/bin">
+		<createForPack name="Herramientas" />
+	</shortcut>
+	<shortcut name="Desinstalar Futboltel" target="$INSTALL_PATH/Uninstaller/uninstaller.jar" iconFile="$INSTALL_PATH/futboltel.ico"
+		iconIndex="0" programGroup="yes" desktop="no" applications="no" startMenu="no" startup="no">
+		<createForPack name="Herramientas" />
+	</shortcut>
+</shortcuts>

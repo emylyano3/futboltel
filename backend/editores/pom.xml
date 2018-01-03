@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>deportel.futboltel</groupId>
+		<artifactId>backend</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	
+	<groupId>deportel.futboltel.backend</groupId>
+	<artifactId>editores</artifactId>
+	<packaging>pom</packaging>
+	<name>Futboltel-Editores</name>
+	<description>Engloba todos los sub proyectos de editores</description>
+	
+	<dependencies>
+		<!-- Dependencias Externas -->
+		<dependency>
+			<groupId>org.uispec4j</groupId>
+			<artifactId>uispec4j</artifactId>
+			<version>2.2</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- Dependencias Internas -->
+		<dependency>
+			<groupId>deportel.futboltel</groupId>
+			<artifactId>guibuilder</artifactId>
+			<version>${gui-builder-version}</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>deportel.futboltel</groupId>
+			<artifactId>persistencia</artifactId>
+			<version>2.0.0</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+	
+	<modules>
+		<module>templates</module>
+		<module>common</module>
+		<module>contenedor</module>
+		<module>contenido</module>
+		<module>administracion</module>
+	</modules>
+</project>

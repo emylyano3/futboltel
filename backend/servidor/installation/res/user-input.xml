@@ -1,0 +1,136 @@
+<userInput>
+	<panel order="0">
+		<createForPack name="Servidor" />
+		<field type="title" txt="Instalacion del servidor futboltel" bold="true" size="1" />
+		<field type="staticText" align="left" txt="Configure la ubicación del servidor de aplicaciones" />
+		<field type="divider" align="top" />
+		<field type="search" variable="tomcat.home">
+			<spec id="tomcat.path" size="25" txt="Path a Apache Tomcat:" checkfilename="webapps" type="directory" result="directory">
+				<choice value="C:\apache-tomcat-7.0.29" os="windows" />
+				<choice value="C:\Apache\apache-tomcat-7.0.29" os="windows" />
+				<choice value="C:\Program Files\apache-tomcat-7.0.29" os="windows" />
+				<choice value="C:\Program Files\Apache\apache-tomcat-7.0.29" os="windows" />
+				<choice value="C:\apache-tomcat-7.0.25" os="windows" />
+				<choice value="C:\Apache\apache-tomcat-7.0.25" os="windows" />
+				<choice value="C:\Program Files\apache-tomcat-7.0.25" os="windows" />
+				<choice value="C:\Program Files\Apache\apache-tomcat-7.0.25" os="windows" />
+
+				<choice value="C:\apache-tomcat-7" os="windows" />
+				<choice value="C:\Apache\apache-tomcat-7" os="windows" />
+				<choice value="C:\Program Files\apache-tomcat-7" os="windows" />
+				<choice value="C:\Program Files\Apache\apache-tomcat-7" os="windows" />
+				<choice value="C:\apache-tomcat-7" os="windows" />
+				<choice value="C:\Apache\apache-tomcat-7" os="windows" />
+				<choice value="C:\Program Files\apache-tomcat-7" os="windows" />
+				<choice value="C:\Program Files\Apache\apache-tomcat-7" os="windows" />
+
+				<choice value="C:\Tomcat-7.0.29" os="windows" />
+				<choice value="C:\Apache\Tomcat-7.0.29" os="windows" />
+				<choice value="C:\Program Files\Tomcat-7.0.29" os="windows" />
+				<choice value="C:\Program Files\Apache\Tomcat-7.0.29" os="windows" />
+				<choice value="C:\Tomcat-7.0.25" os="windows" />
+				<choice value="C:\Apache\Tomcat-7.0.25" os="windows" />
+				<choice value="C:\Program Files\Tomcat-7.0.25" os="windows" />
+				<choice value="C:\Program Files\Apache\Tomcat-7.0.25" os="windows" />
+
+				<choice value="C:\Tomcat-7" os="windows" />
+				<choice value="C:\Apache\Tomcat-7" os="windows" />
+				<choice value="C:\Program Files\Tomcat-7" os="windows" />
+				<choice value="C:\Program Files\Apache\Tomcat-7" os="windows" />
+				<choice value="C:\Tomcat-7" os="windows" />
+				<choice value="C:\Apache\Tomcat-7" os="windows" />
+				<choice value="C:\Program Files\Tomcat-7" os="windows" />
+				<choice value="C:\Program Files\Apache\Tomcat-7" os="windows" />
+
+				<choice value="C:\Tomcat_7.0.29" os="windows" />
+				<choice value="C:\Apache\Tomcat_7.0.29" os="windows" />
+				<choice value="C:\Program Files\Tomcat_7.0.29" os="windows" />
+				<choice value="C:\Program Files\Apache\Tomcat_7.0.29" os="windows" />
+				<choice value="C:\Tomcat_7.0.25" os="windows" />
+				<choice value="C:\Apache\Tomcat_7.0.25" os="windows" />
+				<choice value="C:\Program Files\Tomcat_7.0.25" os="windows" />
+				<choice value="C:\Program Files\Apache\Tomcat_7.0.25" os="windows" />
+
+				<choice value="C:\Tomcat_7" os="windows" />
+				<choice value="C:\Apache\Tomcat_7" os="windows" />
+				<choice value="C:\Program Files\Tomcat_7" os="windows" />
+				<choice value="C:\Program Files\Apache\Tomcat_7" os="windows" />
+				<choice value="C:\Tomcat_7" os="windows" />
+				<choice value="C:\Apache\Tomcat_7" os="windows" />
+				<choice value="C:\Program Files\Tomcat_7" os="windows" />
+				<choice value="C:\Program Files\Apache\Tomcat_7" os="windows" />
+
+				<choice value="C:\Tomcat7.0.29" os="windows" />
+				<choice value="C:\Apache\Tomcat7.0.29" os="windows" />
+				<choice value="C:\Program Files\Tomcat7.0.29" os="windows" />
+				<choice value="C:\Program Files\Apache\Tomcat7.0.29" os="windows" />
+				<choice value="C:\Tomcat7.0.25" os="windows" />
+				<choice value="C:\Apache\Tomcat7.0.25" os="windows" />
+				<choice value="C:\Program Files\Tomcat7.0.25" os="windows" />
+				<choice value="C:\Program Files\Apache\Tomcat7.0.25" os="windows" />
+
+				<choice value="C:\Tomcat7" os="windows" />
+				<choice value="C:\Apache\Tomcat7" os="windows" />
+				<choice value="C:\Program Files\Tomcat7" os="windows" />
+				<choice value="C:\Program Files\Apache\Tomcat7" os="windows" />
+				<choice value="C:\Tomcat7" os="windows" />
+				<choice value="C:\Apache\Tomcat7" os="windows" />
+				<choice value="C:\Program Files\Tomcat7" os="windows" />
+				<choice value="C:\Program Files\Apache\Tomcat7" os="windows" />
+
+				<choice value="C:\Tomcat" os="windows" />
+				<choice value="C:\Apache\Tomcat" os="windows" />
+				<choice value="C:\Program Files\Tomcat" os="windows" />
+				<choice value="C:\Program Files\Apache\Tomcat" os="windows" />
+			</spec>
+		</field>
+	</panel>
+	<panel order="1">
+		<createForPack name="Servidor" />
+		<field type="title" txt="Configuracion de base de datos cliente" bold="true" size="1" />
+		<field type="staticText" align="left" txt="Configure los datos de conexión a la base de datos cliente" />
+		<field type="divider" align="top" />
+		<field type="text" variable="db.client.host">
+			<spec txt="Host de la base cliente:" id="dbhost.client.label" size="15" set="localhost" />
+			<validator class="com.izforge.izpack.util.NotEmptyValidator" txt="El host es obligatorio" />
+		</field>
+		<field type="text" variable="db.client.port">
+			<spec txt="Puerto de la base cliente:" id="dbport.client.label" size="15" set="3306" />
+			<validator class="com.izforge.izpack.util.NotEmptyValidator" txt="El puerto es obligatorio" />
+		</field>
+		<field type="text" variable="db.client.user">
+			<spec txt="Usuario de la base cliente:" id="dbuser.client.label" size="15" set="" />
+			<validator class="com.izforge.izpack.util.NotEmptyValidator" txt="El usuario es obligatorio" />
+		</field>
+		<field type="password" align="left" variable="db.client.pass">
+			<spec>
+				<pwd txt="Contraseña de la base cliente:" size="15" set="" />
+			</spec>
+			<validator class="com.izforge.izpack.util.NotEmptyValidator" txt="La contraseña es obligatoria" />
+		</field>
+	</panel>
+	<panel order="2">
+		<createForPack name="Servidor" />
+		<field type="title" txt="Configuracion de base de datos futboltel" bold="true" size="1" />
+		<field type="staticText" align="left" txt="Configure los datos de conexión a la base de datos futboltel" />
+		<field type="divider" align="top" />
+		<field type="text" variable="db.local.host">
+			<spec txt="Host de la base futboltel:" id="dbhost.local.label" size="15" set="localhost" />
+			<validator class="com.izforge.izpack.util.NotEmptyValidator" txt="El host es obligatorio" />
+		</field>
+		<field type="text" variable="db.local.port">
+			<spec txt="Puerto de la base futboltel:" id="dbport.local.label" size="15" set="3306" />
+			<validator class="com.izforge.izpack.util.NotEmptyValidator" txt="El puerto es obligatorio" />
+		</field>
+		<field type="text" variable="db.local.user">
+			<spec txt="Usuario de la base futboltel:" id="dbuser.local.label" size="15" set="" />
+			<validator class="com.izforge.izpack.util.NotEmptyValidator" txt="El usuario es obligatorio" />
+		</field>
+		<field type="password" align="left" variable="db.local.pass">
+			<spec>
+				<pwd txt="Contraseña de la base futboltel:" size="15" set="" />
+			</spec>
+			<validator class="com.izforge.izpack.util.NotEmptyValidator" txt="La contraseña es obligatoria" />
+		</field>
+	</panel>
+</userInput>

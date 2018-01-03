@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
+<installation version="1.0">
+	<info>
+		<appname>Futboltel Enterprise</appname>
+		<appsubpath>Futboltel</appsubpath>
+		<appversion>1.0.0</appversion>
+		<authors>
+			<author name="Emiliano Schiano di Cola" email="depotel.mobile@gmail.com" />
+		</authors>
+	</info>
+
+	<variables>
+		<variable name="APP_LAUNCH_COMMAND" value="app-launch.bat" />
+		<variable name="DB_CONFIG_COMMAND" value="db-config.bat" />
+		<variable name="DB_INSTALL_COMMAND" value="db-install.bat" />
+		<variable name="DB_INSTALL_SCRIPT" value="db-install.sql" />
+		<variable name="DB_INSTALL_OUTPUT" value="db-install.log" />
+	</variables>
+
+	<!-- Preferencias de interfaz -->
+	<guiprefs resizable="no" width="480" height="360">
+		<laf name="looks">
+			<param name="variant" value="windows" />
+			<os family="windows" />
+		</laf>
+		<modifier key="useHeadingForSummary" value="yes" />
+		<modifier key="useButtonIcons" value="no" />
+		<modifier key="useLabelIcons" value="no" />
+		<modifier key="labelGap" value="2" />
+		<modifier key="layoutAnchor" value="NORTHWEST" />
+		<modifier key="useHeadingPanel" value="yes" />
+		<modifier key="headingImageOnLeft" value="no" />
+		<modifier key="headingLineCount" value="1" />
+		<modifier key="headingFontSize" value="1.5" />
+		<modifier key="headingBackgroundColor" value="0x00ffffff" />
+		<modifier key="headingPanelCounter" value="text" />
+		<modifier key="headingPanelCounterPos" value="inHeading" />
+		<modifier key="doNotShowPackSizeColumn" value="true" />
+		<modifier key="doNotShowRequiredSize" value="yes" />
+	</guiprefs>
+
+	<!-- Instalacion disponible solo en español -->
+	<locale>
+		<langpack iso3="spa" />
+	</locale>
+
+	<!-- Recursos de instalación -->
+	<resources>
+		<!-- Especificacion de recursos de accesos directos en res/shortcut-spec.xml -->
+		<res id="shortcutSpec.xml" src="res/shortcuts-spec.xml" />
+		<res id="Installer.image" src="res/panel-image-blu.png" />
+		<!-- Especificacion del panel de ingreo en user-input.xml -->
+		<res id="userInputSpec.xml" src="res/user-input.xml" />
+	</resources>
+
+	<!-- Requerido para crear los accesos directos en sistemas Windows -->
+	<native type="izpack" name="ShellLink.dll" />
+
+	<!-- Pantallas de instalacion -->
+	<panels>
+		<panel classname="HelloPanel" />
+		<panel classname="TargetPanel" />
+		<panel classname="PacksPanel" />
+		<panel classname="UserInputPanel" id="UserInputPanel.0" />
+		<panel classname="UserInputPanel" id="UserInputPanel.1" />
+		<panel classname="UserInputPanel" id="UserInputPanel.2" />
+		<panel classname="InstallPanel" />
+		<panel classname="ShortcutPanel" />
+		<panel classname="SimpleFinishPanel" />
+	</panels>
+
+	<!-- Paquetes que componen la aplicación -->
+	<packs>
+		<pack name="Herramientas" required="yes" preselected="yes" os="windows">
+			<description>Herramientas de administración</description>
+			<file src="bin/futboltel-backoffice.jar" targetdir="$INSTALL_PATH/bin" />
+			<file src="res/$APP_LAUNCH_COMMAND" targetdir="$INSTALL_PATH/bin" />
+			<file src="res/futboltel.ico" targetdir="$INSTALL_PATH" />
+			<file src="res/$DB_CONFIG_COMMAND" targetdir="$INSTALL_PATH/temp" />
+			<executable targetfile="$INSTALL_PATH/temp/$DB_CONFIG_COMMAND" stage="postinstall" keep="false">
+				<args>
+					<arg value="$INSTALL_PATH" />
+					<arg value="$db.host" />
+					<arg value="$db.port" />
+					<arg value="$db.user" />
+					<arg value="$db.pass" />
+					<arg value="$client.db.host" />
+					<arg value="$client.db.port" />
+					<arg value="$client.db.user" />
+					<arg value="$client.db.pass" />
+				</args>
+			</executable>
+		</pack>
+		<pack name="Base de Datos" required="no" preselected="no" os="windows">
+			<description>Base de datos</description>
+			<file src="res/$DB_INSTALL_SCRIPT" targetdir="$INSTALL_PATH/temp" />
+			<file src="res/$DB_INSTALL_COMMAND" targetdir="$INSTALL_PATH/temp" />
+			<executable targetfile="$INSTALL_PATH/temp/$DB_INSTALL_COMMAND" stage="postinstall" keep="false">
+				<args>
+					<arg value="$INSTALL_PATH" />
+					<arg value="$DB_INSTALL_SCRIPT" />
+					<arg value="$DB_INSTALL_OUTPUT" />
+					<arg value="$db.host" />
+					<arg value="$db.port" />
+					<arg value="$db.user" />
+					<arg value="$db.pass" />
+					<arg value="$mysql.home" />
+				</args>
+			</executable>
+		</pack>
+	</packs>
+</installation>

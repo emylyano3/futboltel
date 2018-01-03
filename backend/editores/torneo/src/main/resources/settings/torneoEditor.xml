@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<gui xmlns="http://www.w3schools.com"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://svn3.xp-dev.com/svn/Futboltel/trunk/Implementacion/fulboltel/guibuilder/src/main/resources/gui.xsd">
+
+	<panels>
+		<panel name="panelContenedor" enabled="true" tool_tip=""/>
+		<panel name="panelToolBar" enabled="true" tool_tip=""/>
+		<panel name="panelStateBar" enabled="true" tool_tip=""/>
+		<panel name="panelFiltros" enabled="true" tool_tip="" background="" border="blackline"/>
+		<panel name="panelDatos" enabled="true" tool_tip=""/>
+		<panel name="panelEventosLocal" enabled="true" tool_tip="" border="blackline"/>
+		<panel name="panelEventosVisitante" enabled="true" tool_tip=""/>
+		<panel name="panelPlantelLocal" enabled="true" tool_tip=""/>
+		<panel name="panelPlantelVisitante" enabled="true" tool_tip=""/>
+		<panel name="panelFiltrosTorneo" enabled="true" tool_tip=""/>
+		<panel name="panelFiltrosFecha" enabled="true" tool_tip=""/>
+		<panel name="panelSFiltrosPartido" enabled="true" tool_tip=""/>
+		<panel name="panelDatosArbitro" enabled="true" tool_tip=""/>
+		<panel name="panelDatosCancha" enabled="true" tool_tip=""/>
+		<panel name="panelDatosHorario" enabled="true" tool_tip=""/>
+		<panel name="panelDatosLocal" enabled="true" tool_tip=""/>
+		<panel name="panelDatosVisitante" enabled="true" tool_tip=""/>
+		<tabbed_panel name="tabbedContenedor" tool_tip="" enabled="true"/>
+	</panels>
+	
+	
+	<buttons>
+		<button name="botonVolverFecha" text="Volver" enabled="true" tool_tip="Vuelve al filtro anterior" action_listener=""/>
+		<button name="botonVolverPartido" text="Volver" enabled="true" tool_tip="Vuelve al filtro anterior" action_listener=""/>
+		<button name="botonIngresarEventos" text="Ingresar eventos" enabled="false" tool_tip="Ingresar los eventos de los jugadores" action_listener=""/>
+		<button name="botonGuardarEventosLocal" text="Confirmar" enabled="false" tool_tip="" action_listener=""/>
+		<button name="botonGuardarEventosVisitante" text="Confirmar" enabled="false" tool_tip="" action_listener=""/>
+		<button name="botonReiniciar" text="Reiniciar" enabled="false" tool_tip="" action_listener=""/>
+		<button name="botonFinalizarVisitante" text="Finalizar" enabled="true" tool_tip="" action_listener=""/>
+		<button name="botonActualizarBase" text="DAR DE ALTA" enabled="false" tool_tip="" action_listener=""/>				
+	</buttons>
+	
+	<tool_bars>
+		<tool_bar name="toolBarBotones" enabled="true" tool_tip="">
+			<image_toogle_button name="toolAlta" text="Alta" enabled="true" tool_tip="" action_listener="" />
+			<image_toogle_button name="toolModif" text="Modif." enabled="true" tool_tip="" action_listener="" />
+			<image_toogle_button name="toolBaja" text="Baja" enabled="true" tool_tip="" action_listener="" />
+			<image_toogle_button name="toolInfo" text="Info" enabled="true" tool_tip="" action_listener="" />
+		</tool_bar>
+	</tool_bars>
+	
+	<labels>
+		<label name="labelTorneo" text="Torneo" icon="" tool_tip="" enabled="true"/>
+		<label name="labelFecha" text="Fecha" icon="" tool_tip="" enabled="true"/>
+		<label name="labelPartido" text="Partido" icon="" tool_tip="" enabled="true"/>
+		<label name="labelArbitro" text="Arbitro" icon="" tool_tip="" enabled="false"/>
+		<label name="labelHorario" text="Horario" icon="" tool_tip="" enabled="false"/>
+		<label name="labelLocal" text="Local" icon="" tool_tip="" enabled="false" visible="false"/>
+		<label name="labelVisitante" text="Visitante" icon="" tool_tip="" enabled="false" visible="true"/>
+		<label name="labelCancha" text="Cancha" icon="" tool_tip="" enabled="false"/>
+		<label name="labelPlantelLocal" text="Plantel Local" icon="" tool_tip="" enabled="true"/>
+		<label name="labelPlantelVisitante" text="Plantel Visitante" icon="" tool_tip="" enabled="true"/>
+	</labels>
+	
+	<text_fields>
+		<text_field name="Arbitro" text="" tool_tip="" focus_listener="" enabled="false" visible="true" />
+		<text_field name="Cancha" text="" tool_tip="" focus_listener="" enabled="false" visible="true" />
+		<text_field name="Horario" text="" tool_tip="" focus_listener="" enabled="false" visible="true" />
+		<text_field name="Local" text="" tool_tip="" focus_listener="" enabled="false" visible="true" />
+		<text_field name="Visitante" text="" tool_tip="" focus_listener="" enabled="false" visible="true" />
+	</text_fields>
+	
+	<tables>
+		<table name="tablaLocal" column_names="" model="" enabled="true" visible="true"/>
+		<table name="tablaVisitante" column_names="" model="" enabled="true" visible="true"/>
+	</tables>
+	
+	
+	<combo_boxes>
+		<combo_box name="torneo" enabled="true" tool_tip="" list="" />
+		<combo_box name="fecha" enabled="false" tool_tip="" list="" />
+		<combo_box name="partido" enabled="false" tool_tip="" list="" />
+	</combo_boxes>
+</gui>

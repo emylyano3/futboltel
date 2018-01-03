@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
+<installation version="1.0">
+	<info>
+		<appname>Servidor Futboltel</appname>
+		<appsubpath>Futboltel</appsubpath>
+		<appversion>1.0.0</appversion>
+		<authors>
+			<author name="Emiliano Schiano di Cola" email="depotel.mobile@gmail.com" />
+		</authors>
+	</info>
+
+	<variables>
+		<variable name="DB_CONFIG_COMMAND" value="db-config.bat" />
+		<variable name="COMPRESSOR.0" value="7z.exe" />
+		<variable name="COMPRESSOR.1" value="7z.dll" />
+	</variables>
+
+	<!-- Preferencias de interfaz -->
+	<guiprefs resizable="no" width="560" height="420">
+		<laf name="looks">
+			<param name="variant" value="windows" />
+			<os family="windows" />
+		</laf>
+		<modifier key="useHeadingForSummary" value="yes" />
+		<modifier key="useButtonIcons" value="yes" />
+		<modifier key="useLabelIcons" value="no" />
+		<modifier key="labelGap" value="2" />
+		<modifier key="layoutAnchor" value="NORTHWEST" />
+		<modifier key="useHeadingPanel" value="yes" />
+		<modifier key="headingImageOnLeft" value="no" />
+		<modifier key="headingLineCount" value="1" />
+		<modifier key="headingFontSize" value="1.5" />
+		<modifier key="headingBackgroundColor" value="0x00ffffff" />
+		<modifier key="headingPanelCounter" value="text" />
+		<modifier key="headingPanelCounterPos" value="inHeading" />
+		<modifier key="doNotShowPackSizeColumn" value="true" />
+		<modifier key="doNotShowRequiredSize" value="yes" />
+	</guiprefs>
+
+	<!-- Instalacion disponible solo en español -->
+	<locale>
+		<langpack iso3="spa" />
+	</locale>
+
+	<!-- Recursos de instalación -->
+	<resources>
+		<!-- Especificacion del panel de ingreo en user-input.xml -->
+		<res id="Installer.image" src="res/panel-image-blu.png" />
+		<res id="userInputSpec.xml" src="res/user-input.xml" />
+	</resources>
+
+	<!-- Pantallas de instalacion -->
+	<panels>
+		<panel classname="HelloPanel" />
+		<panel classname="PacksPanel" />
+		<panel classname="UserInputPanel" id="UserInputPanel.0" />
+		<panel classname="UserInputPanel" id="UserInputPanel.1" />
+		<panel classname="UserInputPanel" id="UserInputPanel.2" />
+		<panel classname="InstallPanel" />
+		<panel classname="ShortcutPanel" />
+		<panel classname="SimpleFinishPanel" />
+	</panels>
+
+	<!-- Paquetes que componen la aplicación -->
+	<packs>
+		<pack name="Servidor" required="yes" os="windows">
+			<description>Servidor Futboltel</description>
+			<file src="bin/deportel" targetdir="$tomcat.home/webapps/temp" />
+			<file src="res/$DB_CONFIG_COMMAND" targetdir="$tomcat.home/webapps/temp" />
+			<file src="res/$COMPRESSOR.0" targetdir="$tomcat.home/webapps/temp" />
+			<file src="res/$COMPRESSOR.1" targetdir="$tomcat.home/webapps/temp" />
+			<executable targetfile="$tomcat.home/webapps/temp/$DB_CONFIG_COMMAND" stage="postinstall" keep="false">
+				<args>
+					<arg value="$tomcat.home/webapps/temp" />
+					<arg value="$db.client.host" />
+					<arg value="$db.client.port" />
+					<arg value="$db.client.user" />
+					<arg value="$db.client.pass" />
+					<arg value="$db.local.host" />
+					<arg value="$db.local.port" />
+					<arg value="$db.local.user" />
+					<arg value="$db.local.pass" />
+				</args>
+			</executable>
+		</pack>
+	</packs>
+</installation>

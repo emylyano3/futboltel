@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>futboltel-server</display-name>
+  <filter>
+    <description>Obtiene los parametros codificados del contexto enviados por los usuarios los decodifica y los inyecta en el contexto</description>
+    <display-name>MobileContextDecoder</display-name>
+    <filter-name>MobileContextDecoder</filter-name>
+    <filter-class>com.deportel.server.web.filter.MobileContextDecoderFilter</filter-class>
+  </filter>
+  <filter>
+    <description>Autentica a los usuarios que se conectan al servidor</description>
+    <display-name>MobileAuthentication</display-name>
+    <filter-name>MobileAuthentication</filter-name>
+    <filter-class>com.deportel.server.web.filter.MobileAuthenticationFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>MobileContextDecoder</filter-name>
+    <url-pattern>/MobileService</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>MobileAuthentication</filter-name>
+    <url-pattern>/MobileService</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description>Provee servicios de datos a las aplicaciones móviles</description>
+    <display-name>MobileService</display-name>
+    <servlet-name>MobileService</servlet-name>
+    <servlet-class>com.deportel.server.web.servlet.MobileServiceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MobileService</servlet-name>
+    <url-pattern>/MobileService</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <login-config>
+    <auth-method>BASIC</auth-method>
+  </login-config>
+  <servlet>
+    <description></description>
+    <display-name>AdministrationService</display-name>
+    <servlet-name>AdministrationService</servlet-name>
+    <servlet-class>com.deportel.server.web.servlet.AdministrationServiceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdministrationService</servlet-name>
+    <url-pattern>/AdministrationService</url-pattern>
+  </servlet-mapping>
+</web-app>

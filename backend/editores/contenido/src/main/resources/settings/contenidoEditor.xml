@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<gui xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://svn3.xp-dev.com/svn/Futboltel/trunk/Implementacion/fulboltel/guibuilder/src/main/resources/gui.xsd">
+
+	<panels>
+		<panel name="ceGlobal" tool_tip=""
+			layout="org.jdesktop.layout.GroupLayout" border="" enabled="true"
+			font_name="Arial" font_style="bold" font_size="13" visible="false" />
+
+		<!-- Paneles donde se ubican los componentes de configuracion de la consulta -->
+		<panel name="configuracionPrincipal" tool_tip=""
+			layout="org.jdesktop.layout.GroupLayout" border="" enabled="true"
+			font_name="Arial" font_style="bold" font_size="13" visible="true" />
+
+		<!-- Paneles donde se configura el componente de respuesta -->
+		<panel name="consulta" tool_tip="" font_name="Arial" font_style="bold"
+			font_size="13" layout="org.jdesktop.layout.GroupLayout" border=""
+			enabled="true" visible="true" />
+
+		<!-- Paneles del query tester -->
+		<panel name="qtGeneral" tool_tip="" font_name="Arial"
+			font_style="bold" font_size="13" layout="org.jdesktop.layout.GroupLayout"
+			border="Tester" enabled="true" visible="true" />
+		<panel name="qtParams" tool_tip=""
+			layout="org.jdesktop.layout.GroupLayout" border="Tester" enabled="true"
+			font_name="Arial" font_style="bold" font_size="13" visible="true" />
+		<panel name="qtParamsScroll" tool_tip=""
+			layout="org.jdesktop.layout.GroupLayout" border="Tester" enabled="true"
+			font_name="Arial" font_style="bold" font_size="13" visible="true" />
+		<panel name="qtResult" tool_tip=""
+			layout="org.jdesktop.layout.GroupLayout" border="Tester" enabled="true"
+			font_name="Arial" font_style="bold" font_size="13" visible="true" />
+
+		<!-- Paneles del query selector -->
+		<panel name="qsGeneral" tool_tip=""
+			layout="org.jdesktop.layout.GroupLayout" border="Tester" enabled="true"
+			font_name="Arial" font_style="bold" font_size="13" visible="true" />
+		<panel name="qsButtons" tool_tip=""
+			layout="org.jdesktop.layout.GroupLayout" border="Tester" enabled="true"
+			font_name="Arial" font_style="bold" font_size="13" visible="true" />
+		<panel name="qsGrid" tool_tip="" layout="org.jdesktop.layout.GroupLayout"
+			font_name="Arial" font_style="bold" font_size="13" border="Tester"
+			enabled="true" visible="true" />
+	</panels>
+
+	<scroll_panes>
+		<scroll_pane name="crearComponente" visble="false" />
+		<scroll_pane name="paramSalida" visble="false" />
+		<scroll_pane name="paramEntrada" visble="false" />
+		<scroll_pane name="sqlConsulta" visble="false" />
+		<scroll_pane name="descripcionConsulta" visble="false" />
+
+		<!-- Scroll Panes del query tester -->
+		<scroll_pane name="qtGrid" enabled="true" visble="false" />
+		<scroll_pane name="qtParams" enabled="true" visble="false" />
+
+		<!-- Scroll Panes del query selector -->
+		<scroll_pane name="qsGrid" enabled="true" visble="false" />
+	</scroll_panes>
+
+	<labels>
+		<label name="temaDeAplicacion" text="Tema de aplicación"
+			font_name="Arial" font_style="plain" font_size="13" tool_tip=""
+			enabled="true" visible="true" />
+		<label name="tipoComponenteResp" text="Tipo de componente de respuesta"
+			font_name="Arial" font_style="plain" font_size="13" tool_tip=""
+			enabled="false" visible="true" />
+		<label name="componenteResp" text="Componente de respuesta"
+			font_name="Arial" font_style="plain" font_size="13" tool_tip=""
+			enabled="false" visible="true" />
+		<label name="nombreConsulta" text="Nombre de la consulta"
+			font_name="Arial" font_style="plain" font_size="13" tool_tip=""
+			enabled="false" visible="true" />
+		<label name="sqlConsulta" text="SQL de la consulta" tool_tip=""
+			font_name="Arial" font_style="plain" font_size="13" enabled="false"
+			visible="true" />
+		<label name="descripcionConsulta" text="Descipción de la consulta"
+			font_name="Arial" font_style="plain" font_size="13" tool_tip=""
+			enabled="false" visible="true"/>
+		<label name="tipoComponenteSolicitante" text="Tipo de componente solicitante"
+			font_name="Arial" font_style="plain" font_size="13" tool_tip=""
+			enabled="false" visible="true" />
+		<label name="componenteSolicitante" text="Componente solicitante"
+			font_name="Arial" font_style="plain" font_size="13" tool_tip=""
+			enabled="false" visible="true" />
+
+		<!-- Labels del query tester -->
+		<label name="qtResult" text="Componente solicitante" tool_tip=""
+			font_name="Arial" font_style="plain" font_size="13" enabled="true"
+			visible="true" />
+	</labels>
+
+	<text_areas>
+		<text_area name="sqlConsulta" text="" font_name="Arial"
+			font_style="plain" font_size="13"
+			tool_tip="Ingrese aquí la consulta que desea realizar utilizando lenguaje HQL"
+			focus_listener="com.deportel.editor.contenido.view.listener.CEFocusListener"
+			enabled="false" visible="true" text_limit="1000"/>
+		<text_area name="descripcionConsulta" text="" font_name="Arial"
+			font_style="plain" font_size="13"
+			tool_tip="Ingrese aquí la descripción de la consulta"
+			focus_listener="com.deportel.editor.contenido.view.listener.CEFocusListener"
+			enabled="false" visible="true" text_limit="200"/>
+	</text_areas>
+
+	<buttons>
+		<!-- Botones del query tester -->
+		<button name="qtEjecutar" icon="" text="Ejecutar"
+			tool_tip="Lanza la consulta configurada" enabled="true" visible="true"
+			font_name="Arial" font_style="plain" font_size="13"
+			action_listener="com.deportel.editor.contenido.view.listener.CEActionListener" />
+
+		<!-- Botones del query selector -->
+		<button name="qsEdit" icon="" text="Editar" font_name="Arial"
+			font_style="plain" font_size="13"
+			tool_tip="Carga la pantalla de edicion con el item seleccionado en la grilla"
+			enabled="true" visible="false"
+			action_listener="com.deportel.editor.contenido.view.listener.CEActionListener" />
+		<button name="qsDelete" icon="" text="Eliminar" font_name="Arial"
+			font_style="plain" font_size="13"
+			tool_tip="Elimina los items seleccionados en la grilla" enabled="true"
+			visible="false"
+			action_listener="com.deportel.editor.contenido.view.listener.CEActionListener" />
+		<button name="qsCancel" icon="" text="Cerrar" font_name="Arial"
+			font_style="plain" font_size="13" tool_tip="Cierra la ventana de selección"
+			enabled="true" visible="true"
+			action_listener="com.deportel.editor.contenido.view.listener.CEActionListener" />
+	</buttons>
+
+	<tables>
+		<!-- Tablas del query tester -->
+		<table name="qtResult" column_names="" column_widths=""
+			model="com.deportel.editor.common.gui.EditorTableModel"
+			cell_renderer="com.deportel.editor.common.gui.EditorTableCellRenderer"
+			font_name="Arial" font_style="plain" font_size="13" header_font_name="Arial"
+			header_font_style="bold" header_font_size="13" background_color="ECF8FB"
+			foreground_color="000000" focus_listener="" enabled="true" visible="true" />
+
+		<!-- Tablas del query selector -->
+		<table name="qsGrid" column_names="Id,Nombre,Descripción"
+			column_widths="40,210,300" model="com.deportel.editor.common.gui.EditorTableModel"
+			cell_renderer="com.deportel.editor.common.gui.EditorTableCellRenderer"
+			font_name="Arial" font_style="plain" font_size="13" header_font_name="Arial"
+			header_font_style="bold" header_font_size="13" background_color="ECF8FB"
+			foreground_color="000000" focus_listener="" enabled="true" visible="true" />
+	</tables>
+
+	<text_fields>
+		<text_field name="nombreConsulta" text=""
+			tool_tip="Ingrese el nombre de consulta" font_name="Arial"
+			font_style="plain" font_size="13"
+			focus_listener="com.deportel.editor.contenido.view.listener.CEFocusListener"
+			enabled="false" visible="true" text_limit="45"/>
+		<text_field name="rowLimit" text="" font_name="Arial"
+			font_style="plain" font_size="13" tool_tip="Ingrese limite de filas de la consulta"
+			focus_listener="com.deportel.editor.contenido.view.listener.CEFocusListener"
+			enabled="false" visible="true" text_limit="4"/>
+	</text_fields>
+
+	<binded_combos>
+		<binded_combo name="tipoComponenteSolicitante" text=""
+			first_item_empty="true" font_name="Arial" font_style="plain"
+			font_size="13"
+			tool_tip="Elija el tipo de componente que dispara la ejecución de la consulta"
+			list="" enabled="false" visible="true"
+			action_listener="com.deportel.editor.contenido.view.listener.CEActionListener" />
+		<binded_combo name="componenteSolicitante" text=""
+			first_item_empty="true" font_name="Arial" font_style="plain"
+			font_size="13"
+			tool_tip="Elija el componente al que dispara la ejecución la consulta"
+			list="" enabled="false" visible="true"
+			action_listener="com.deportel.editor.contenido.view.listener.CEActionListener" />
+		<binded_combo name="temaDeAplicacion" text=""
+			first_item_empty="true" font_name="Arial" font_style="plain"
+			font_size="13"
+			tool_tip="Elija el tema del cual se van a seleccionar los componentes"
+			list="" enabled="true" visible="true"
+			action_listener="com.deportel.editor.contenido.view.listener.CEActionListener" />
+		<binded_combo name="tipoComponenteResp" text=""
+			first_item_empty="true" font_name="Arial" font_style="plain"
+			font_size="13"
+			tool_tip="Elija el tipo de componente que se usará para el armado de la respuesta"
+			list="" enabled="false" visible="true"
+			action_listener="com.deportel.editor.contenido.view.listener.CEActionListener" />
+		<binded_combo name="componenteResp" text=""
+			first_item_empty="true" font_name="Arial" font_style="plain"
+			font_size="13"
+			tool_tip="Elija el componente que se usará para el armado de la respuesta"
+			list="" enabled="false" visible="true"
+			action_listener="com.deportel.editor.contenido.view.listener.CEActionListener" />
+	</binded_combos>
+
+	<progress_bars>
+		<progress_bar name="executingQuery" tool_tip="Se esta ejecutando la consulta"
+			string_painted="true" indeterminated="true" enabled="false" visible="false" />
+	</progress_bars>
+
+	<tool_bars>
+		<tool_bar name="toolBarEditorContenido" tool_tip="" enabled="true"
+			visible="true">
+			<button name="new" text="" icon="/images/new_icon.png"
+				tool_tip="Nueva consulta de datos"
+				action_listener="com.deportel.editor.contenido.view.listener.CEActionListener"
+				enabled="true" visible="true" />
+			<button name="edit" text="" icon="/images/edit_icon.png"
+				tool_tip="Modificar consulta de datos"
+				action_listener="com.deportel.editor.contenido.view.listener.CEActionListener"
+				enabled="true" visible="true" />
+			<button name="delete" text="" icon="/images/delete_icon.png"
+				tool_tip="Eliminar consulta de datos"
+				action_listener="com.deportel.editor.contenido.view.listener.CEActionListener"
+				enabled="true" visible="true" />
+			<button name="save" text="" icon="/images/save_icon.png"
+				tool_tip="Guardar"
+				action_listener="com.deportel.editor.contenido.view.listener.CEActionListener"
+				enabled="false" visible="true" />
+			<button name="saveAsNew" text="" icon="/images/save_as_new_icon.png"
+				tool_tip="Guarda como nuevo"
+				action_listener="com.deportel.editor.contenido.view.listener.CEActionListener"
+				enabled="false" visible="true" />
+			<button name="testQuery" text="" icon="/images/execute_icon.png"
+				tool_tip="Ejecutar consulta"
+				action_listener="com.deportel.editor.contenido.view.listener.CEActionListener"
+				enabled="false" visible="true" />
+		</tool_bar>
+	</tool_bars>
+
+	<check_boxes>
+		<check_box name="limitRows" text="Limitar resultados"
+			font_name="Arial" font_style="plain" font_size="13"
+			tool_tip="Seleccione para limitar la cantidad de filas devueltas por la consulta"
+			action_listener="com.deportel.editor.contenido.view.listener.CEActionListener"
+			enabled="false" visible="true" selected="false" />
+		<check_box name="enumerateRows" text="Numerar filas"
+			font_name="Arial" font_style="plain" font_size="13"
+			tool_tip="Seleccione para numerar las filas devueltas por la consulta"
+			action_listener="com.deportel.editor.contenido.view.listener.CEActionListener"
+			enabled="false" visible="true" selected="false" />
+	</check_boxes>
+</gui>

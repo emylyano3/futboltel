@@ -1,0 +1,21 @@
+<APP id="J0000001" name="JFutboltel" ep="R1000000" bgc="JDBD7D0" fgc="J6C583D" alc="JF6840B" rcx="J0" rcy="J0" rcw="J100" rch="J100" tstamp="J0" uti="J1" childs="J0" flags="J3" >
+	<SCR id="J1000000" name="JSCR_SelTeam" bgc="JDBD7D0" fgc="J6C583D" alc="JF6840B" rcx="J0" rcy="J0" rcw="J100" rch="J100" flags="J1F" lsk="J" rsk="JSeleccionar" tstamp="J0" uti="J1" childs="J0" action="JSELE" aparam="J" next="J0" previous="J0" >
+		<MNU id="J2000002" name="JMNU_Otros" text="JOtros" img="J" bgc="JC3B099" fgc="J1A56D2" alc="JF9F0F0" rcx="J67" rcy="J0" rcw="J34" rch="J7" flags="J3F" type="J0" lsk="JCerrar" rsk="JSeleccionar" tstamp="J0" uti="J1" childs="J0" tal="J3" fty="J1" marx="J0" mary="J0" >
+			<BTN id="J4000008" name="JBUT_Subsc" text="JSuscribir" action="JOPEN_SCRE" img="J" rcx="J0" rcy="J0" rcw="J0" rch="J0" bgc="JC3B099" fgc="J6C583D" alc="J1A56D2" flags="J1E" tstamp="J0" uti="J1" anc="J0" tal="J6" marx="J3" mary="J0" aparam="J{OPEN_SCRE[tar=1000009]}" fty="J1" />
+			<BTN id="J4000018" name="JBUT_Relacionados" text="JSitios de interes" action="JOPEN_SCRE" img="J" rcx="J0" rcy="J0" rcw="J0" rch="J0" bgc="JC3B099" fgc="J6C583D" alc="J1A56D2" flags="J1E" tstamp="J0" uti="J1" anc="J0" tal="J6" marx="J3" mary="J0" aparam="J{OPEN_SCRE[tar=100000F]}" fty="J1" />
+			<BTN id="J4000017" name="JBUT_Recom" text="JRecomendar" action="JOPEN_SCRE" img="J" rcx="J0" rcy="J0" rcw="J0" rch="J0" bgc="JC3B099" fgc="J6C583D" alc="J1A56D2" flags="J1E" tstamp="J0" uti="J1" anc="J0" tal="J6" marx="J3" mary="J0" aparam="J{OPEN_SCRE[tar=100000D]}" fty="J1" />
+			<BTN id="J4000009" name="JBUT_Ayuda" text="JAyuda" action="JOPEN_SCRE" img="J" rcx="J0" rcy="J0" rcw="J0" rch="J0" bgc="JC3B099" fgc="J6C583D" alc="J1A56D2" flags="J1E" tstamp="J0" uti="J1" anc="J0" tal="J6" marx="J3" mary="J0" aparam="J{OPEN_SCRE[tar=1000001]}" fty="J1" />
+			<BTN id="J4000010" name="JBUT_Legales" text="JLegales" action="JOPEN_SCRE" img="J" rcx="J0" rcy="J0" rcw="J0" rch="J0" bgc="JC3B099" fgc="J6C583D" alc="J1A56D2" flags="J1E" tstamp="J0" uti="J1" anc="J0" tal="J6" marx="J3" mary="J0" aparam="J{OPEN_SCRE[tar=1000004]}" fty="J1" />
+		</MNU>
+	</SCR>
+	<SCR id="J100000F" name="JSCR_Relacionados" bgc="JECE7DF" fgc="J1000000" alc="J1000000" rcx="J0" rcy="J0" rcw="J100" rch="J100" flags="JF" lsk="JAnterior" rsk="JSiguiente" tstamp="J0" uti="J1" childs="J0" action="J" aparam="J0" next="J" previous="J" >
+		<LAB id="J8000033" name="JLAB_Relacionados" rcx="J50" rcy="J10" rcw="J98" rch="J7" text="JSitios Relacionados" bgc="JECE7DF" fgc="J6C583D" alc="JF6840B" flags="J1A" tstamp="J0" uti="J1" anc="J17" tal="J17" marx="J0" mary="J0" fty="J1" />
+		<SCV id="J3000010" name="JSCV_Relacionados" rcx="J0" rcy="J17" rcw="J100" rch="J62" lsk="JVolver" rsk="J" bgc="JECE7DF" fgc="J776347" alc="JF6840B" flags="J9F" xsc="J0" ysc="J0" tstamp="J0" uti="J1" childs="I5" marx="J4" mary="J5" >
+			<BTN id="J4000019" name="JBUT_Sitio1" text="I" action="JOPEN_LINK" img="J" rcx="J2" rcy="J22" rcw="J96" rch="J6" bgc="JECE7DF" fgc="J776347" alc="JF6840B" flags="J1E" tstamp="J0" uti="J1" anc="J0" tal="J6" marx="J3" mary="J0" aparam="I" fty="J1" />
+			<BTN id="J400001A" name="JBUT_Sitio2" text="I" action="JOPEN_LINK" img="J" rcx="J2" rcy="J28" rcw="J96" rch="J6" bgc="JECE7DF" fgc="J776347" alc="JF6840B" flags="J1E" tstamp="J0" uti="J1" anc="J0" tal="J6" marx="J3" mary="J0" aparam="I" fty="J1" />
+			<BTN id="J400001B" name="JBUT_Sitio3" text="I" action="JOPEN_LINK" img="J" rcx="J2" rcy="J34" rcw="J96" rch="J6" bgc="JECE7DF" fgc="J776347" alc="JF6840B" flags="J1E" tstamp="J0" uti="J1" anc="J0" tal="J6" marx="J3" mary="J0" aparam="I" fty="J1" />
+			<BTN id="J400001C" name="JBUT_Sitio4" text="I" action="JOPEN_LINK" img="J" rcx="J2" rcy="J40" rcw="J96" rch="J6" bgc="JECE7DF" fgc="J776347" alc="JF6840B" flags="J1E" tstamp="J0" uti="J1" anc="J0" tal="J6" marx="J3" mary="J0" aparam="I" fty="J1" />
+			<BTN id="J400001D" name="JBUT_Sitio5" text="I" action="JOPEN_LINK" img="J" rcx="J2" rcy="J46" rcw="J96" rch="J6" bgc="JECE7DF" fgc="J776347" alc="JF6840B" flags="J1E" tstamp="J0" uti="J1" anc="J0" tal="J6" marx="J3" mary="J0" aparam="I" fty="J1" />
+		</SCV>
+	</SCR>
+</APP>

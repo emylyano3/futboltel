@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>deportel</groupId>
+		<artifactId>futboltel</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	
+	<groupId>deportel.futboltel</groupId>
+	<artifactId>seguridad</artifactId>
+	<version>${seguridad-version}</version>
+	<name>Futboltel-Seguridad</name>
+	<description>Modulo de seguridad</description>
+	
+	<dependencies>
+		<dependency>
+			<groupId>deportel.futboltel</groupId>
+			<artifactId>common</artifactId>
+			<version>${common-version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>deportel.futboltel</groupId>
+			<artifactId>guibuilder</artifactId>
+			<version>${gui-builder-version}</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>deportel.futboltel</groupId>
+			<artifactId>persistencia</artifactId>
+			<version>2.0.0</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+</project>
